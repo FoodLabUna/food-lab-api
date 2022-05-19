@@ -1,4 +1,5 @@
 #python 3.10.2
+gunicorn==20.1.0
 tflite-runtime == 2.8.0
 keras == 2.9.0
 flask == 2.1.2
