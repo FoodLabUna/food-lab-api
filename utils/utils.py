@@ -1,11 +1,10 @@
-import tflite_runtime.interpreter as tflite
-from tflite_runtime.interpreter.keras.models import Sequential
-from tflite_runtime.interpreter.keras.layers import Conv2D
-from tflite_runtime.interpreter.keras.layers import MaxPooling2D
-from tflite_runtime.interpreter.keras.layers import Flatten
-from tflite_runtime.interpreter.keras.layers import Dense
+from keras.models import Sequential
+from keras.layers import Conv2D
+from keras.layers import MaxPooling2D
+from keras.layers import Flatten
+from keras.layers import Dense
 import numpy as np
-#import tensorflow as tf
+import tensorflow as tf
 import config as conf
 
 
@@ -54,8 +53,8 @@ def validaImagem(nameImage):
 
   
    
-    test_image = tflite.keras.preprocessing.image.load_img(nameImage, target_size = (64, 64))
-    test_image = tflite.keras.preprocessing.image.img_to_array(test_image)
+    test_image = tf.keras.preprocessing.image.load_img(nameImage, target_size = (64, 64))
+    test_image = tf.keras.preprocessing.image.img_to_array(test_image)
     test_image = np.expand_dims(test_image, axis = 0)
     result = classifier.predict(test_image)
     training_set.class_indices
