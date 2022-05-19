@@ -1,0 +1,6 @@
+#python 3.10.2
+tflite-runtime == 2.8.0
+keras == 2.9.0
+flask == 2.1.2
+pyngrok==4.1.1
+flask-ngrok
