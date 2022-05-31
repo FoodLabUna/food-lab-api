@@ -3,4 +3,4 @@ from os import path
 
 
 appDir = str(pathlib.Path().resolve())
-UPLOAD_FOLDER = str(appDir)+'\\uploads'
+UPLOAD_FOLDER = str(appDir)+'/uploads'
